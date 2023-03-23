@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-
+using Dominio;
 namespace WindowsFormsApp1
 
 {
@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=POKEDEX_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Numero, Nombre, Descripcion From POKEMONS";
+                comando.CommandText = "select Numero, Nombre, P.Descripcion, UrlImagen, e.Descripcion as Tipo, D.Descripcion Debilidad from POKEMONS P , ELEMENTOS E , ELEMENTOS D where P.IdTipo = E.Id and D.Id = P.IdDebilidad";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -33,7 +33,11 @@ namespace WindowsFormsApp1
                     aux.Numero = lector.GetInt32(0);
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-
+                    aux.UrlImagen = (string)lector["UrlImagen"];
+                    aux.Tipo = new Elemento();
+                    aux.Tipo.Descripcion = (string)lector["Tipo"];
+                    aux.Debilidad = new Elemento();
+                    aux.Debilidad.Descripcion = (string)lector["Debilidad"];
                     lista.Add(aux);
                 }
 
@@ -44,7 +48,6 @@ namespace WindowsFormsApp1
             {
                 throw ex;
             }
-
         }
     }
 }
