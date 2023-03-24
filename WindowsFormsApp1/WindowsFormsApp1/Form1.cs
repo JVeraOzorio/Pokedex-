@@ -22,14 +22,17 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            load();
+        }
+
+       private void load()
+        {
             PokemonNegocio negocio = new PokemonNegocio();
             listaPokemon = negocio.listar();
             dataGridView1.DataSource = listaPokemon;
             cargarImagen(listaPokemon[0].UrlImagen);
             dataGridView1.Columns["UrlImagen"].Visible = false;
         }
-
-       
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             Pokemon seleccionado = (Pokemon)dataGridView1.CurrentRow.DataBoundItem;
@@ -52,7 +55,7 @@ namespace WindowsFormsApp1
         {
             frmAltaPokemon alta = new frmAltaPokemon();
             alta.ShowDialog();
-
+            load();
         }
     }
 }
