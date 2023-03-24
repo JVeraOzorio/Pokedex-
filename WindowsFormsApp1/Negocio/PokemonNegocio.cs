@@ -17,7 +17,9 @@ namespace Negocio
 
             try
             {
-                data.setQuery("insert into POKEMONS(Numero, nombre,descripcion,activo) values (" + pokemon.Numero + ",'"+pokemon.Nombre+ "','"+ pokemon.Descripcion+ "',1)");
+                data.setQuery("insert into POKEMONS(Numero, nombre,descripcion,activo,idTipo,IdDebilidad) values (" + pokemon.Numero + ",'"+pokemon.Nombre+ "','"+ pokemon.Descripcion+ "',1, @idTipo, @idDebilidad)");
+                data.setearParametro("@idTipo", pokemon.Tipo.Id);
+                data.setearParametro("@idDebilidad", pokemon.Debilidad.Id);
                 data.ejecutarAccion();
             }
             catch (Exception e)

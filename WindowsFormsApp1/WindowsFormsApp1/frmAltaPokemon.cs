@@ -31,6 +31,8 @@ namespace WindowsFormsApp1
                 pokemon.Numero = int.Parse(txbNumero.Text);
                 pokemon.Nombre = txbNombre.Text;
                 pokemon.Descripcion = txbDescripcion.Text;
+                pokemon.Tipo = (Elemento)cmbxTipo.SelectedItem;
+                pokemon.Debilidad = (Elemento)cmbxDebilidad.SelectedItem;
 
                 PokemonNegocio negocio = new PokemonNegocio();
                 negocio.agregar(pokemon);
@@ -44,5 +46,22 @@ namespace WindowsFormsApp1
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void frmAltaPokemon_Load(object sender, EventArgs e)
+        {
+            ElementoNegocio element = new ElementoNegocio();
+            try
+            {
+                cmbxTipo.DataSource = element.List();
+                cmbxDebilidad.DataSource = element.List();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                
+            }
+        }
+
+       
     }
 }
