@@ -23,3 +23,9 @@ C:\Users\gatoe\OneDrive\Escritorio\Pokedex--main\Pokedex--main\WindowsFormsApp1\
 C:\Users\gatoe\OneDrive\Escritorio\Pokedex--main\Pokedex--main\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Dominio.dll
 C:\Users\gatoe\OneDrive\Escritorio\Pokedex--main\Pokedex--main\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Dominio.pdb
 C:\Users\gatoe\OneDrive\Escritorio\Pokedex--main\Pokedex--main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Dominio.dll
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Negocio.dll
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Dominio.pdb
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Negocio.pdb
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmAltaPokemon.resources

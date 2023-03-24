@@ -5,11 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Dominio;
-namespace WindowsFormsApp1
+
+namespace Negocio
 
 {
-    class PokemonNegocio
+    public class PokemonNegocio
     {
+        public void agregar(Pokemon pokemon)
+        {   
+            AccesoDatos data = new AccesoDatos();
+
+            try
+            {
+                data.setQuery("insert into POKEMONS(Numero, nombre,descripcion,activo) values (" + pokemon.Numero + ",'"+pokemon.Nombre+ "','"+ pokemon.Descripcion+ "',1)");
+                data.ejecutarAccion();
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            finally
+            {
+                data.close();
+            }   
+        }
+
         public List<Pokemon> listar()
         {
             List<Pokemon> lista = new List<Pokemon>();

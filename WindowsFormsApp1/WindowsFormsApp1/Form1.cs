@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
+using Negocio;
 
 namespace WindowsFormsApp1
 {
@@ -47,5 +48,11 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaPokemon alta = new frmAltaPokemon();
+            alta.ShowDialog();
+
+        }
     }
 }

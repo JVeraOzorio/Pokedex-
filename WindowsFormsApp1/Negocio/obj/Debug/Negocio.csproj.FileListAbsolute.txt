@@ -1,0 +1,9 @@
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\Negocio\bin\Debug\Negocio.dll
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\Negocio\bin\Debug\Negocio.pdb
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\Negocio\bin\Debug\Dominio.dll
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\Negocio\bin\Debug\Dominio.pdb
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\Negocio\obj\Debug\Negocio.dll
+C:\Users\gatoe\OneDrive\Escritorio\Desarrollo\C#\ProyectoMaxiPrograma\WindowsFormsApp1\Negocio\obj\Debug\Negocio.pdb
