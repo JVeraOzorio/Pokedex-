@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
             dataGridView1.DataSource = listaPokemon;
             cargarImagen(listaPokemon[0].UrlImagen);
             dataGridView1.Columns["UrlImagen"].Visible = false;
+            dataGridView1.Columns["Id"].Visible = false;
         }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -56,6 +57,50 @@ namespace WindowsFormsApp1
             frmAltaPokemon alta = new frmAltaPokemon();
             alta.ShowDialog();
             load();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Pokemon seleccionado;
+            seleccionado = (Pokemon)dataGridView1.CurrentRow.DataBoundItem;
+            frmAltaPokemon modificar = new frmAltaPokemon(seleccionado);
+            modificar.ShowDialog();
+            load();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            eliminar();
+        }
+
+        private void btnEliminarLogica_Click(object sender, EventArgs e)
+        {
+            eliminar(true);
+        }
+
+        private void eliminar(bool logico = false)
+        {
+            PokemonNegocio negocio = new PokemonNegocio();
+            Pokemon seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Está seguro que desea eliminar el pokemon seleccionado?", "Eliminar Pokemon", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Pokemon)dataGridView1.CurrentRow.DataBoundItem;
+
+                    if (logico)
+                        negocio.elimnarLogica(seleccionado.Id);
+                    else
+                        negocio.eliminar(seleccionado.Id);
+                    load();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
