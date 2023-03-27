@@ -60,8 +60,7 @@ namespace WindowsFormsApp1
                 negocio.agregar(pokemon);
                 MessageBox.Show("Pokemon agregado");
                 }
-
-
+                this.Close();
             }
             catch (Exception ex)
             {

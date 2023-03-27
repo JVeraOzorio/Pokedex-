@@ -34,6 +34,9 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEliminarLogica = new System.Windows.Forms.Button();
+            this.lblFiltro = new System.Windows.Forms.Label();
+            this.txbFiltro = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPokemon)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +45,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 41);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -55,7 +58,7 @@
             // pbPokemon
             // 
             this.pbPokemon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbPokemon.Location = new System.Drawing.Point(708, 12);
+            this.pbPokemon.Location = new System.Drawing.Point(708, 41);
             this.pbPokemon.Name = "pbPokemon";
             this.pbPokemon.Size = new System.Drawing.Size(296, 243);
             this.pbPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -64,7 +67,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(13, 308);
+            this.btnAgregar.Location = new System.Drawing.Point(13, 337);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(93, 31);
             this.btnAgregar.TabIndex = 2;
@@ -74,7 +77,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(112, 308);
+            this.btnModificar.Location = new System.Drawing.Point(112, 337);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(93, 31);
             this.btnModificar.TabIndex = 3;
@@ -85,7 +88,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(224, 308);
+            this.btnEliminar.Location = new System.Drawing.Point(224, 337);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(93, 31);
             this.btnEliminar.TabIndex = 4;
@@ -96,7 +99,7 @@
             // 
             // btnEliminarLogica
             // 
-            this.btnEliminarLogica.Location = new System.Drawing.Point(323, 308);
+            this.btnEliminarLogica.Location = new System.Drawing.Point(323, 337);
             this.btnEliminarLogica.Name = "btnEliminarLogica";
             this.btnEliminarLogica.Size = new System.Drawing.Size(129, 31);
             this.btnEliminarLogica.TabIndex = 5;
@@ -105,11 +108,40 @@
             this.btnEliminarLogica.UseVisualStyleBackColor = true;
             this.btnEliminarLogica.Click += new System.EventHandler(this.btnEliminarLogica_Click);
             // 
+            // lblFiltro
+            // 
+            this.lblFiltro.AutoSize = true;
+            this.lblFiltro.Location = new System.Drawing.Point(13, 19);
+            this.lblFiltro.Name = "lblFiltro";
+            this.lblFiltro.Size = new System.Drawing.Size(36, 16);
+            this.lblFiltro.TabIndex = 6;
+            this.lblFiltro.Text = "Filtro";
+            // 
+            // txbFiltro
+            // 
+            this.txbFiltro.Location = new System.Drawing.Point(55, 16);
+            this.txbFiltro.Name = "txbFiltro";
+            this.txbFiltro.Size = new System.Drawing.Size(163, 22);
+            this.txbFiltro.TabIndex = 7;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(224, 16);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 450);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txbFiltro);
+            this.Controls.Add(this.lblFiltro);
             this.Controls.Add(this.btnEliminarLogica);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -122,6 +154,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPokemon)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,6 +166,9 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEliminarLogica;
+        private System.Windows.Forms.Label lblFiltro;
+        private System.Windows.Forms.TextBox txbFiltro;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
 

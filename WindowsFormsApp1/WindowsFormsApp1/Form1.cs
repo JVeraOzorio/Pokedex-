@@ -30,14 +30,22 @@ namespace WindowsFormsApp1
             PokemonNegocio negocio = new PokemonNegocio();
             listaPokemon = negocio.listar();
             dataGridView1.DataSource = listaPokemon;
+            ocultarColumnas();
             cargarImagen(listaPokemon[0].UrlImagen);
+        }
+
+        private void ocultarColumnas()
+        {
             dataGridView1.Columns["UrlImagen"].Visible = false;
             dataGridView1.Columns["Id"].Visible = false;
         }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            Pokemon seleccionado = (Pokemon)dataGridView1.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.UrlImagen);
+            if(dataGridView1.CurrentRow != null)
+            {
+                Pokemon seleccionado = (Pokemon)dataGridView1.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.UrlImagen);
+            }
         }
 
         private void cargarImagen(string imagen)
@@ -101,6 +109,25 @@ namespace WindowsFormsApp1
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<Pokemon> listaFiltrada;
+            string filtro = txbFiltro.Text;
+
+            if(filtro != "")
+            {
+                listaFiltrada = listaPokemon.FindAll(x => x.Nombre.ToLower() == filtro.ToLower());
+            }
+            else
+            {
+                listaFiltrada = listaPokemon;
+            }
+
+            dataGridView1.DataSource = null;     
+            dataGridView1.DataSource = listaFiltrada;
+            ocultarColumnas();
         }
     }
 }
